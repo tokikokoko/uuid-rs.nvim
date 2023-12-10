@@ -5,6 +5,6 @@
 Add this your `init.lua`
 
 ```lua
-require("lazy").setup({{"tokikokoko/uuid-rs.nvim"}})
+require("lazy").setup({{"tokikokoko/uuid-rs.nvim", build = ":UuidBuild"}})
 ```
 
