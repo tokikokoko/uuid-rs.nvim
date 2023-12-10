@@ -9,6 +9,10 @@ function! StartIfNotRunning()
     endif
 endfunction
 
+function! uuidrsnvim#build()
+    call system('cargo build --release')
+endfunction
+
 function! uuidrsnvim#uuid()
     call StartIfNotRunning()
     let uuid = rpcrequest(g:channel, 'uuid', [])
@@ -17,4 +21,5 @@ function! uuidrsnvim#uuid()
 endfunction
 
 command! Uuid call uuidrsnvim#uuid()
+command! UuidBuild call uuidrsnvim#build()
 
