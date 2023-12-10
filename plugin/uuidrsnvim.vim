@@ -10,7 +10,8 @@ function! StartIfNotRunning()
 endfunction
 
 function! uuidrsnvim#build()
-    call system('cargo build --release')
+    exec ':cd ' . s:p_dir . '/..'
+    make
 endfunction
 
 function! uuidrsnvim#uuid()
